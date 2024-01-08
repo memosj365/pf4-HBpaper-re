@@ -7,6 +7,7 @@ header .wrap {
   align-items: center;
   display: block;
   margin: 0 30px;
+  position: relative;
 }
 header .wrap h1 {
   
@@ -20,11 +21,14 @@ header .wrap h1 a {
   margin-left: 50px;
 }
 header .menu{
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
 }
 header .wrap ul.gnb {
   
+  grid-column: 1;
+  grid-row: 1 / span 3;
 }
 header .wrap ul.gnb li {
   
@@ -56,12 +60,15 @@ header .wrap .sublist div ul.useguide li a {
   
 }
 header .wrap span.lang {
-  
+  grid-column: 2;
+  grid-row: 2;
+  /*! display: block; */
+  margin-top: 12px;
 }
 header .wrap span.lang a {
   display: block;
   color: black;
-  line-height: 100px;
+  line-height: 2;
   padding: 0 20px;
 }
 header .wrap span.lang a:nth-child(2){
